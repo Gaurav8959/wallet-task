@@ -4,7 +4,7 @@ Wallet module with deposit, transfer, transaction history and summary APIs.
 
 Built with Node.js, Express, TypeScript, TypeORM and MySQL.
 
-Live URL: <add deployed url here>
+Live URL: https://wallet-task-production.up.railway.app
 
 ## Setup
 
@@ -30,9 +30,10 @@ For production:
 
 ```bash
 npm run build
-npm run migration:run:prod
 npm start
 ```
+
+`npm start` runs pending migrations before starting the server.
 
 ## APIs
 
@@ -53,7 +54,7 @@ GET  /wallet/summary
 
 `type` can be CREDIT, DEBIT or TRANSFER.
 
-Postman collection is in `postman/wallet-task.postman_collection.json`. Login and register save the token automatically.
+Postman collection is in `postman/wallet-task.postman_collection.json`. `baseUrl` points to the live URL, change it to `http://localhost:5555` for local testing. Login and register save the token automatically.
 
 ## Notes
 

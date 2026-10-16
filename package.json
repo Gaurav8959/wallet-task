@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env nodemon --exec npx ts-node server/index.ts",
     "build": "rimraf dist && tsc",
-    "start": "node dist/server/index.js",
+    "start": "npm run migration:run:prod && node dist/server/index.js",
     "migration:create": "typeorm migration:create",
     "migration:run": "ts-node ./node_modules/typeorm/cli.js migration:run -d ./server/data-source/data-source.ts",
     "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert -d ./server/data-source/data-source.ts",

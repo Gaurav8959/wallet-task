@@ -16,7 +16,7 @@
   "variable": [
     {
       "key": "baseUrl",
-      "value": "http://localhost:5555"
+      "value": "https://wallet-task-production.up.railway.app"
     },
     {
       "key": "token",
